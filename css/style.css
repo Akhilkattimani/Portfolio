@@ -1,0 +1,331 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Matrix Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("../images/hacker-bg.jpg") center/cover no-repeat;
+    opacity:.15;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to bottom,#000,#001500,#000);
+    z-index:-1;
+}
+
+/* Navbar */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #00ff66;
+}
+
+.logo h2{
+    color:#00ff66;
+    font-family:'Orbitron',sans-serif;
+    letter-spacing:3px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00ff66;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:120px 80px;
+}
+
+.hero-left{
+    width:50%;
+}
+
+.hero-left h4{
+    color:#00ff66;
+    font-size:25px;
+}
+
+.hero-left h1{
+    font-size:60px;
+    margin:15px 0;
+}
+
+.hero-left h2{
+    color:#00ff66;
+    margin-bottom:20px;
+}
+
+.hero-left p{
+    line-height:30px;
+    color:#ddd;
+}
+
+.hero-right img{
+    width:350px;
+    border-radius:50%;
+    border:4px solid #00ff66;
+    box-shadow:0 0 40px #00ff66;
+}
+
+/* Buttons */
+
+.btn,
+.btn2{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:14px 35px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.btn{
+background:#00ff66;
+color:black;
+margin-right:15px;
+}
+
+.btn:hover{
+box-shadow:0 0 25px #00ff66;
+transform:translateY(-5px);
+}
+
+.btn2{
+border:2px solid #00ff66;
+color:#00ff66;
+}
+
+.btn2:hover{
+background:#00ff66;
+color:black;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:80px;
+}
+
+.card{
+background:#101010;
+padding:35px;
+text-align:center;
+border-radius:20px;
+transition:.4s;
+border:1px solid #00ff66;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00ff66;
+}
+
+.card i{
+font-size:50px;
+color:#00ff66;
+margin-bottom:20px;
+}
+
+/* Stats */
+
+.stats{
+display:flex;
+justify-content:space-evenly;
+padding:80px;
+background:#0a0a0a;
+}
+
+.stats h1{
+font-size:45px;
+color:#00ff66;
+}
+
+.stats p{
+text-align:center;
+}
+
+/* Footer */
+
+footer{
+padding:30px;
+text-align:center;
+background:#000;
+}
+
+.social a{
+color:#00ff66;
+font-size:28px;
+margin:15px;
+transition:.3s;
+}
+
+.social a:hover{
+color:white;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+padding:20px;
+flex-direction:column;
+}
+
+nav ul{
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-left,
+.hero-right{
+width:100%;
+}
+
+.hero-left h1{
+font-size:40px;
+}
+
+.hero-right img{
+width:250px;
+margin-bottom:40px;
+}
+
+.stats{
+flex-direction:column;
+gap:30px;
+}
+
+.cards{
+padding:30px;
+}
+
+}
+
+.progress{
+width:100%;
+height:20px;
+background:#222;
+border-radius:30px;
+margin-top:15px;
+overflow:hidden;
+}
+
+.bar{
+height:100%;
+background:#00ff66;
+text-align:right;
+padding-right:10px;
+line-height:20px;
+font-size:12px;
+font-weight:bold;
+color:#000;
+border-radius:30px;
+}
+
+.ccna{width:90%;}
+.linux{width:88%;}
+.aws{width:85%;}
+.windows{width:80%;}
+.shell{width:75%;}
+.git{width:80%;}
+.docker{width:60%;}
+.k8s{width:50%;}
+
+
+input,
+textarea{
+
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+background:#1a1a1a;
+color:white;
+border:1px solid #00ff66;
+border-radius:8px;
+font-size:16px;
+
+}
+
+textarea{
+
+resize:none;
+
+}
+
+form button{
+
+cursor:pointer;
+
+}
